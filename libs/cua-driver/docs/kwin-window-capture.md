@@ -61,7 +61,9 @@ Captures exclude the pointer and window shadow, include decorations, and use
 logical resolution to match the reported window coordinate frame. Native pixel
 formats are decoded with row-stride and premultiplied-alpha handling. Unsupported
 formats, invalid layouts, mismatched owners/UUIDs, closed windows and timeouts
-are errors.
+are errors. Hermetic decoder coverage includes distinct pixels across padded
+rows in both premultiplied formats, including low-alpha rounding; it does not
+prove live KWin capture permission or delivery.
 
 ## Focused native regression
 
